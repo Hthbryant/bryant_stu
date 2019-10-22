@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="|${#request.getContextPath()}/|"/>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>学号</td>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>年龄</td>
+                <td>班级</td>
+                <td>手机号</td>
+                <td>住址</td>
+                <td>操作</td>
+            </tr>
+            <tr th:each="stu : ${stuList}">
+                <td th:text="${stu.id}">学号</td>
+                <td th:text="${stu.name}">姓名</td>
+                <td th:text="${stu.sex}">性别</td>
+                <td th:text="${stu.age}">年龄</td>
+                <td th:text="${stu.cls.name}">班级</td>
+                <td th:text="${stu.phone}">手机号</td>
+                <td th:text="${stu.address}">住址</td>
+                <td ><a th:href="|stu/delOne?id=${stu.id}|">删除</a><a th:href="|stu/toUpdate?id=${stu.id}|">修改</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/stu/toAddStu">添加学生</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

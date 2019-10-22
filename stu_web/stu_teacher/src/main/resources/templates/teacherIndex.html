@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="|${#request.getContextPath()}/back/|"/>
+    <meta charset="UTF-8">
+    <title>老师首页</title>
+    <!--<script type="text/javascript" src="../static/resources/jquery.js"></script>
+    <script>
+        $(function () {
+            alert(${teacher.id});
+        })
+    </script>-->
+</head>
+<body>
+<h3 th:text="|欢迎您,${teacher.name}老师|">hello</h3>
+<a  th:href="|teacher/showClasses?id=${teacher.id}|">查看我的班级</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="|${#request.getContextPath()}/back/|"/>
+    <meta charset="UTF-8">
+    <title>所带班级</title>
+</head>
+<body>
+<h1>以下是您带的班级</h1>
+<table>
+    <tr>
+        <td>班级编号</td>
+        <td>班级名称</td>
+        <td>班级人数</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="class : ${classList}">
+        <td th:text="${class.id}">班级编号</td>
+        <td th:text="${class.name}">班级名称</td>
+        <td th:text="${class.name}">班级人数</td>
+        <td><a th:href="|teacher/showClass?cid=${class.id}|">查看班级详情</a></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:24000
+      name: application
+      profile: class,eureka,datasource
