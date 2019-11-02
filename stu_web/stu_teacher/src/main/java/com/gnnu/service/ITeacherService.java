@@ -9,4 +9,6 @@ public interface ITeacherService {
     Teacher login(Teacher teacher);
 
     List<Class> getClassesById(Integer id);
+
+    Class selectClassById(Integer cid);
 }

@@ -35,4 +35,14 @@ public class TeacherServiceImpl implements ITeacherService {
 //        System.out.println("实现类里面id:"+id);
 //        return null;
     }
+
+    @Override
+    public Class selectClassById(Integer cid) {
+        //调用classfeign查询指定班级信息
+        return classFeign.selectByCid(cid);
+        //根据班级id查询该班级的所有授课老师
+
+        //根据班级id查询该班级的所有学生
+
+    }
 }

@@ -3,4 +3,4 @@ spring:
     config:
       uri: http://localhost:24000
       name: application
-      profile: student,eureka,datasource,thymeleaf,redis
+      profile: sso,eureka,redis,thymeleaf,datasource
